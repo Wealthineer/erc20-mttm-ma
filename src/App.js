@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {ethers} from 'ethers';
 import MTTMMA from'./artifacts/contracts/MttmMaToken.sol/MttmMaToken.json'
 
-const mttmmaAddress = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+const mttmmaAddress = "0x4DFD6fd7093FFD589ea825B23a5E5f0A0eE21759"
 
 function App() {
 
