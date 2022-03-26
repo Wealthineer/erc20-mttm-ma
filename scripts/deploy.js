@@ -13,6 +13,7 @@ async function main() {
         deployer.address
     );
     // Hardhat always runs the compile task when running scripts with its command
+
     // line interface.
     //
     // If this script is run directly using `node` you may want to call compile
@@ -28,6 +29,15 @@ async function main() {
 
 
     console.log("MTTM-MA deployed to:", mttmMA.address);
+
+    const MultiMinter = await hre.ethers.getContractFactory("MultiMinter");
+    const multiMinter = await MultiMinter.deploy();
+
+    await multiMinter.deployed();
+
+
+    console.log("MultiMinter deployed to:", multiMinter.address);
+
 }
 
 // We recommend this pattern to be able to use async/await everywhere
